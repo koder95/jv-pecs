@@ -12,7 +12,9 @@ import java.util.Map;
  * Your implementation of MachineService.
  */
 public class MachineServiceImpl implements MachineService<Machine> {
-    private Map<Class<? extends Machine>, MachineProducer<? extends Machine>> producers = new HashMap<>();
+    private Map<Class<? extends Machine>, MachineProducer<? extends Machine>>
+            producers = new HashMap<>();
+
     {
         producers.put(Bulldozer.class, new BulldozerProducer());
         producers.put(Excavator.class, new ExcavatorProducer());
